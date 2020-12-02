@@ -2,3 +2,4 @@
   base = "./"
   cmd = "npx eleventy"
   publish = "_site"
+  ignore = "git diff --quiet HEAD^ HEAD studio/"
