@@ -1,5 +1,5 @@
 [build]
   base = "./"
-  cmd = "npx eleventy"
+  cmd = "npm run build"
   publish = "_site"
   ignore = "git diff --quiet HEAD^ HEAD studio/"
