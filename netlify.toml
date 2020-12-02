@@ -1,5 +1,5 @@
 [build]
   base = "web"
   cmd = "npm run build"
-  publish = "web/_site"
+  publish = "_site"
   ignore = "git diff --quiet HEAD^ HEAD studio/"
