@@ -1,0 +1,17 @@
+<ol>
+{% for module in modules %}
+    <li><h3>{{ module.title }}</h3>
+        <ol>
+        {% for article in module.articles %}
+            <li><h4>
+                {% if article.isStub %}
+                    <strong>(Coming Soon)</strong> {{ article.title }}
+                    {% else %}
+                    <a href="/articles/{{article.slug}}">{{ article.title }}</a>
+                {% endif %}
+            </h4></li>
+        {% endfor %}
+        </ol>
+    </li>
+{% endfor %}
+</ol>

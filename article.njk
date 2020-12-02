@@ -1,0 +1,25 @@
+---
+pagination:
+  data: articles
+  size: 1
+  alias: article
+
+permalink: "articles/{{ article.slug }}/index.html"
+layout: "base.njk"
+---
+
+<h2>{{ article.title }}</h2>
+
+<aside class="flow">
+    <h3>{{ '/assets/img/learn.svg' | svgContents | safe }} Learning Goals</h3>
+    <ul>
+    {% for goal in article.goals %}
+      <li>{{ goal }}</li>
+    {% endfor %}
+    </ul>
+</aside>
+<hr>
+<section class="flow">
+{{ article.bodyMd | markdownify | safe }}
+</section>
+
